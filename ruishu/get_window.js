@@ -127,7 +127,7 @@ function get_window(content) {
         'window.document = document;\n' +
         'window.name =\'$_YWTU=Jh3P2YKSyNGx_QEwhphSpSZo39RjjVlYhyGO5xxyrS7&$_cDro=1&vdFm=\';\n' +
         'window.globalStorage=undefined;\n' +
-        'window.sessionStorag={\n' +
+        'window.sessionStorage={\n' +
         '        $_YWTU: "Jh3P2YKSyNGx_QEwhphSpSZo39RjjVlYhyGO5xxyrS7",\n' +
         '        $_cDro: "1",\n' +
         '        };\n' +
