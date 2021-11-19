@@ -89,6 +89,11 @@ function get_window(content) {
         'window.addEventListener= function (arg1, arg2, arg3) {\n' +
         '        return undefined\n' +
         '    };\n' +
+        'var Storage = {\n' +
+        '    removeItem: function (arg) {\n' +
+        '        return undefined\n' +
+        '    }\n' +
+        '};\n' +
         'window.localStorage= {\n' +
         '        $_YWTU: "Jh3P2YKSyNGx_QEwhphSpSZo39RjjVlYhyGO5xxyrS7",\n' +
         '        $_cDro: "1",\n' +
@@ -108,6 +113,7 @@ function get_window(content) {
         '        FSSBB50: "454716:2",\n' +
         '        "__#classType": "localStorage",\n' +
         '    };\n' +
+        'window.localStorage.__proto__ = Storage;\n' +
         'window.location = {\n' +
         '        hash: "",\n' +
         '        host: "www.customs.gov.cn",\n' +
@@ -246,14 +252,12 @@ function get_window(content) {
         '    };\n' +
         'window.top = window;\n' +
         'window.self = window;\n' +
-        'var XMLHttpRequest = function () {\n' +
+        'window.XMLHttpRequest = function () {\n' +
         '\n' +
         '};\n' +
         '$_ts = window.$_ts;\n' +
-        'var Storage = {\n' +
-        '    removeItem: function (arg) {\n' +
-        '        return undefined\n' +
-        '    }\n' +
+        'window.setTimeout = function setTimeout() {\n' +
+        '\n' +
         '};'
     var get_cookie = 'function getcookie() {return document.cookie}'
     fs.writeFile('section_2.js', daobao + data + window._$Pp + get_cookie, function (err) {
